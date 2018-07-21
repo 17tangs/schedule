@@ -1,0 +1,75 @@
+*{
+  background-color:#C5D3FF;
+}
+.schedule{
+  display:flex;
+  justify-content:center;
+}
+.container{
+  background-color:#CBC7FF;
+  width: 975px;
+  height: 500px;
+  display: flex;
+  border:20px solid white;
+  justify-content: center;
+}
+
+.hourDivider{
+  width: 100px;
+  height: 500px;
+}
+.hour{
+  position:relative;
+  top: 50px;
+  width:100px;
+  height:44px;
+  background-color:#CBC7FF;
+  border-bottom:1px solid white;
+}
+.hourText{
+  position:absolute;
+  right:2px;
+  bottom:2px;
+  font-family: 'Josefin Slab', serif;
+  background-color:#CBC7FF;
+
+}
+
+.day{
+  width: 175px;
+  height:500px;
+  background-color: #A6B9F6;
+  color: white;
+  text-align:center;
+  border-left:1px solid white;
+}
+
+.class1{
+  position:relative;
+  top:185px;
+  width:175px;
+  height:45px;
+  background-color: blue;
+}
+
+.class2{
+  position:relative;
+  top:185px;
+  width:175px;
+  height:90px;
+  background-color: red;
+}
+.classText{
+  position: absolute;
+  bottom:3px;
+  right:3px;
+  font-family: 'Josefin Slab', serif;
+  font-size:150%;
+}
+h1{
+  font-family: fantasy;
+  font-size:3em;
+  border-bottom:2px solid pink;
+  border-right: 2px solid pink;
+  text-align: center;
+}
