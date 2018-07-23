@@ -1,16 +1,15 @@
 *{
-  background-color:#C5D3FF;
+  background-color:#25201B;
 }
 .schedule{
   display:flex;
   justify-content:center;
 }
 .container{
-  background-color:#CBC7FF;
+  background-color:#25201B;
   width: 975px;
   height: 500px;
   display: flex;
-  border:20px solid white;
   justify-content: center;
 }
 
@@ -20,56 +19,102 @@
 }
 .hour{
   position:relative;
-  top: 50px;
   width:100px;
-  height:44px;
-  background-color:#CBC7FF;
-  border-bottom:1px solid white;
+  height:49px;
+  background-color:#25201B;
 }
 .hourText{
   position:absolute;
+  top:2px;
   right:2px;
-  bottom:2px;
-  font-family: 'Josefin Slab', serif;
-  background-color:#CBC7FF;
+  font-family: 'Bebas Neue', serif;
+  background-color: #25201B;
+  color:white;
 
 }
 
 .day{
   width: 175px;
   height:500px;
-  background-color: #A6B9F6;
+  background-color: #25201B;
   color: white;
   text-align:center;
-  border-left:1px solid white;
+}
+.dayTextContainer{
+  position:relative;
+  top:0px;
+  width:171px;
+  height:50px;
+  margin-left:2px;
+  margin-right:2px;
+}
+.dayText{
+  position:absolute;
+  bottom:0px;
+  left:80px;
+  font-family: 'Bebas Neue', serif;
+  font-size:150%;
 }
 
 .class1{
   position:relative;
-  top:185px;
-  width:175px;
-  height:45px;
-  background-color: blue;
-}
+  top:150px;
+  width:171px;
+  height:46px;
+  border:2px solid #25201B;
 
+}
 .class2{
   position:relative;
-  top:185px;
-  width:175px;
-  height:90px;
-  background-color: red;
+  top:150px;
+  width:171px;
+  height:96px;
+  border:2px solid #25201B;
+}
+.class3{
+  position:relative;
+  width:171px;
+  height:96px;
+  border:2px solid #25201B;}
+.class4{
+  position:relative;
+  width:171px;
+  height:96px;
+  border:2px solid #25201B;
+}
+.class5{
+  position:relative;
+  width:171px;
+  height:146px;
+  border:2px solid #25201B;
+}
+
+.c1{
+  background-color:#3F51B5;
+}
+.c2{
+  background-color:#F44336;
+}
+.c3{
+  background-color:#009688;
+}
+.c4{
+  background-color:#FF9800;
+}
+.c5{
+  background-color:#673AB7;
 }
 .classText{
   position: absolute;
-  bottom:3px;
-  right:3px;
-  font-family: 'Josefin Slab', serif;
+  bottom:0px;
+  right:5px;
+  font-family: 'Bebas Neue', serif;
   font-size:150%;
 }
+
 h1{
-  font-family: fantasy;
+  font-family: 'Bebas Neue', serif;
   font-size:3em;
-  border-bottom:2px solid pink;
-  border-right: 2px solid pink;
+  color:white;
   text-align: center;
 }
