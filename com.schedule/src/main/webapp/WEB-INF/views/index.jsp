@@ -10,7 +10,7 @@
     	</title>
     </head>
     <body>
-		<h1>Sam Tang's Schedule</h1>
+		<h1>${name}'s Schedule</h1>
 		<div class="schedule">
 			<div class="container">
 				<div class="hourDivider">
