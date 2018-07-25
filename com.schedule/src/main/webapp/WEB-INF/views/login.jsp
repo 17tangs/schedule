@@ -1,22 +1,35 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
+<head>
+<title></title>
 	<link href="<c:url value="/resources/styleForm.css" />" rel="stylesheet">
-  </head>
-<body>
-  <h1>Form</h1>
-  <div class="form-style-5">
-  	<p><font color="red">${errorMessage}</font></p>
-    <form action = "/login" method = "POST">
-      <fieldset>
-        <legend><span class="number">1</span> Candidate Info</legend>
-        <input type="text" name="field1" placeholder="username ">
-        <input type="password" name="field2" placeholder="password">     
-      </fieldset>
-      <input type="submit" value="login" />
-    </form>
-  </div>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet'>
+	<script>
+	function activateUserLine(){
+		document.getElementById('bord1').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(1);  transition: transform 250ms ease-in-out;'
+	}
+	function deactivateUserLine(){
+		document.getElementById('bord1').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(0);  transition: transform 250ms ease-in-out;'
+	}
+	function activatePassLine(){
+		document.getElementById('bord2').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(1);  transition: transform 250ms ease-in-out;'
+	}
+	function deactivatePassLine(){
+		document.getElementById('bord2').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(0);  transition: transform 250ms ease-in-out;'
+	}
+	</script>
+</head>
+<body class = "background">
+	<div>
+		<h2>Login to your account</h2>
+		<form class="form-style-8" action = "/login" method = "POST">
+			<input type="text" name="field1" placeholder="Username" onfocus="activateUserLine();" onblur="deactivateUserLine();" /> 
+			<div id = "bord1"></div>			
+			<input type="password" name="field2" placeholder="Password" onfocus="activatePassLine();" onblur="deactivatePassLine();" /> 
+			<div id = "bord2"></div>
+			<input type="submit" value="Login" />
+		</form>
+	</div>
 </body>
 </html>
