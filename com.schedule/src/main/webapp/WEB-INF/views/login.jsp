@@ -24,9 +24,9 @@
 	<div>
 		<h2>Login to your account</h2>
 		<form class="form-style-8" action = "/login" method = "POST">
-			<input type="text" name="field1" placeholder="Username" onfocus="activateUserLine();" onblur="deactivateUserLine();" /> 
+			<input type="text" name="username" id = "username" placeholder="Username" onfocus="activateUserLine();" onblur="deactivateUserLine();" /> 
 			<div id = "bord1"></div>			
-			<input type="password" name="field2" placeholder="Password" onfocus="activatePassLine();" onblur="deactivatePassLine();" /> 
+			<input type="password" name="password" id = "password" placeholder="Password" onfocus="activatePassLine();" onblur="deactivatePassLine();" /> 
 			<div id = "bord2"></div>
 			<input type="submit" value="Login" />
 		</form>
