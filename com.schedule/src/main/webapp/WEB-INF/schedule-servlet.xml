@@ -8,6 +8,8 @@
 
     <context:component-scan base-package="com.schedule" />
     
+    <mvc:view-controller path="/" view-name="login"/>
+    
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
 			<value>/WEB-INF/views/</value>

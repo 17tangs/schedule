@@ -3,9 +3,10 @@
 <html>
   <head>
     <title></title>
-	<link href="<c:url value="/resources/styleForm.css" />" rel="stylesheet" type="test/css">
+	<link href="<c:url value="/resources/styleForm.css" />" rel="stylesheet">
   </head>
 <body>
+  <h1>Form</h1>
   <div class="form-style-5">
   	<p><font color="red">${errorMessage}</font></p>
     <form action = "/login" method = "POST">
