@@ -1,8 +1,10 @@
 package com.schedule.scratch;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ScratchController {
@@ -13,8 +15,16 @@ public class ScratchController {
 	 */
 	
 	@RequestMapping (value = "/scratch/login", method = RequestMethod.GET)
-	public String login()
+	public String displayLoginPage()
 	{
+		return "login";
+	}
+	@RequestMapping (value = "/scratch/login", method = RequestMethod.POST)
+	public String handleLogin(ModelMap model, @RequestParam String username, @RequestParam String password) {
+		if(username.equals("sam") && password.equals("awesome")) {
+			model.put("name", username);
+			return "index";
+		}
 		return "login";
 	}
 }
