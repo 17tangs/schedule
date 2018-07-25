@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class LoginController {
-	// TODO implement custom login screen
-	// for now default login of spring security works
+	@RequestMapping (value = "/login", method = RequestMethod.GET)
+	public String login()
+	{
+		return "login";
+	}
 }
