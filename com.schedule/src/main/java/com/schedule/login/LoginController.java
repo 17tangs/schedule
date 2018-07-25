@@ -20,12 +20,12 @@ public class LoginController {
 	}
 	
 	@RequestMapping (value = "/login", method = RequestMethod.POST)
-	public String HandleLogin(@RequestParam String field1, @RequestParam String field2, ModelMap model) {
-		if(!service.validateUser(field1, field2)) {
+	public String HandleLogin(@RequestParam String username, @RequestParam String password, ModelMap model) {
+		if(!service.validateUser(username, password)) {
 			model.put("errorMessage", "Invalid Credentials!!");
 			return "login";
 		}
-		model.put("name", field1);
+		model.put("name", username);
 		return "index";
 	}
 
