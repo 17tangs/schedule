@@ -29,6 +29,7 @@
 			<input type="password" name="password" id = "password" placeholder="Password" onfocus="activatePassLine();" onblur="deactivatePassLine();" /> 
 			<div id = "bord2"></div>
 			<input type="submit" value="Login" />
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 		</form>
 	</div>
 </body>

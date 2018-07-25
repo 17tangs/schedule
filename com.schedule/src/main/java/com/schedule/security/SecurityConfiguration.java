@@ -7,7 +7,6 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
@@ -42,13 +41,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	}
 	
 	protected void configure (HttpSecurity http) throws Exception {
-		// everyone can access login page
-		http.authorizeRequests().antMatchers("/login").permitAll() 
+		http.authorizeRequests()
 		// everyone can access the scratch test pages
 		.antMatchers("/scratch/**").permitAll()
 		// the rest of the pages require admin permissino
 		.antMatchers("/","/**").access("hasRole('ADMIN')").and()
-		.formLogin();
+		.formLogin()
+		.loginPage("/login")
+		.permitAll(true);
 	}
 
 }
