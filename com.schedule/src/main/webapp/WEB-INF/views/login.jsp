@@ -7,16 +7,16 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet'>
 	<script>
 	function activateUserLine(){
-		document.getElementById('bord1').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(1);  transition: transform 250ms ease-in-out;'
+		document.getElementById('bord1').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(1); transform-origin:7% 50%;  transition: transform 500ms ease-in-out;'
 	}
 	function deactivateUserLine(){
-		document.getElementById('bord1').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(0);  transition: transform 250ms ease-in-out;'
+		document.getElementById('bord1').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(0); transform-origin:7% 100%; transition: transform 250ms ease-in-out;'
 	}
 	function activatePassLine(){
-		document.getElementById('bord2').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(1);  transition: transform 250ms ease-in-out;'
+		document.getElementById('bord2').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(1); transform-origin:7% 50%; transition: transform 500ms ease-in-out;'
 	}
 	function deactivatePassLine(){
-		document.getElementById('bord2').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(0);  transition: transform 250ms ease-in-out;'
+		document.getElementById('bord2').style.cssText = 'border-top:1px solid white; width:100%; height:5px; transform: scaleX(0);  transform-origin:7% 100%; transition: transform 250ms ease-in-out;'
 	}
 	</script>
 </head>
