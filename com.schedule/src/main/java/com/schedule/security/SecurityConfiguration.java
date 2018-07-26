@@ -19,7 +19,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		throws Exception {
 		
 		// for now in memory authenticator used for test
-		auth.inMemoryAuthentication().withUser("sabin").password("Infinity01").roles("ADMIN")
+		auth.inMemoryAuthentication().withUser("Sabin").password("Infinity01").roles("ADMIN")
 		.and()
 		.withUser("Sam").password("awesome").roles("ADMIN");
 	}
