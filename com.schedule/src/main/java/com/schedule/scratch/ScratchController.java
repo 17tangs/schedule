@@ -13,7 +13,7 @@ public class ScratchController {
 	 * Make sure the mapping has prefix /scratch/
 	 * And return the jsp which you want to see
 	 */
-	
+	/*
 	@RequestMapping (value = "/scratch/login", method = RequestMethod.GET)
 	public String displayLoginPage()
 	{
@@ -26,5 +26,6 @@ public class ScratchController {
 			return "index";
 		}
 		return "login";
-	}
+	}*/
+	
 }

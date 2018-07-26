@@ -17,7 +17,7 @@ public class GeneralController {
 	IScheduleProvider scheduleProvider = new TestScheduleProvider();
 	// --------- mappings    -------
 
-	@RequestMapping (value = "/index", method = RequestMethod.GET)
+	@RequestMapping (value = "/", method = RequestMethod.GET)
 	public String login(ModelMap model)
 	{
 		System.out.println(scheduleProvider.getScheduleOfUser(getLoggedInUserName()).toString());

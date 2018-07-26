@@ -220,7 +220,7 @@
 			</div>
 		</div>
 		</div><script type = "text/javascript" src = "<c:url value="/resources/JQuery/scheduleScript.js"/>"></script>
-		<a href="/scratch/login">log out</a>
+		<a href="/logout">log out</a>
     </body>
 
 </html>

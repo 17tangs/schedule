@@ -45,7 +45,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		// everyone can access the scratch test pages
 		.antMatchers("/scratch/**").permitAll()
 		// the rest of the pages require admin permissino
-		.antMatchers("/","/**").access("hasRole('ADMIN')").and()
+		.antMatchers("/","/login").access("hasRole('ADMIN')").and()
 		.formLogin()
 		.loginPage("/login")
 		.permitAll(true);

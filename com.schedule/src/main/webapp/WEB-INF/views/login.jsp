@@ -23,7 +23,7 @@
 <body class = "background">
 	<div>
 		<h2>Welcome to Schedule</h2>
-		<form class="form-style-8" action = "/scratch/login" method = "POST">
+		<form class="form-style-8" action = "/login" method = "POST">
 			<input type="text" name="username" id = "username" placeholder="Username" onfocus="activateUserLine();" onblur="deactivateUserLine();" /> 
 			<div id = "bord1"></div>			
 			<input type="password" name="password" id = "password" placeholder="Password" onfocus="activatePassLine();" onblur="deactivatePassLine();" /> 
