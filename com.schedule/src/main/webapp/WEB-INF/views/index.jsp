@@ -11,7 +11,7 @@
     </head>
     <body>
 		<h1>${name}'s Schedule</h1>
-		<div class="schedule">
+		<div class = "schedule">
 			<div class="container">
 				<div class="hourDivider">
 					<div class="hours">
@@ -192,7 +192,35 @@
 				</div>
 			</div>
 		</div>
-		<a href="/logout">log out</a>
+		<div id = "background">
+		</div>
+		<div class = "details">
+			<div class = "c1Details", id = "c1d">
+				<h1>MATH 131AH</h1>
+			</div>
+		</div>
+		<div class = "details">	
+			<div class = "c2Details", id = "c2d">
+				<h1>CS 35L</h1>
+			</div>
+		</div>
+		<div class = "details">	
+			<div class = "c3Details", id = "c3d">
+				<h1>CS M51A</h1>
+			</div>
+		</div>
+		<div class = "details">	
+			<div class = "c4Details", id = "c4d">
+				<h1>CS 180</h1>
+			</div>
+		</div>
+		<div class = "details">	
+			<div class = "c5Details", id = "c5d">
+				<h1>PHYSICS 4AL</h1>
+			</div>
+		</div>
+		</div><script type = "text/javascript" src = "<c:url value="/resources/JQuery/scheduleScript.js"/>"></script>
+		<a href="/scratch/login">log out</a>
     </body>
 
 </html>
