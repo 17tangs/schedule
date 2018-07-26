@@ -7,16 +7,20 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.schedule.service.IScheduleProvider;
+import com.schedule.service.TestScheduleProvider;
+
 @Controller
 public class GeneralController {
 	// For now this is where most mapping will belong
 	
-
+	IScheduleProvider scheduleProvider = new TestScheduleProvider();
 	// --------- mappings    -------
 
 	@RequestMapping (value = "/index", method = RequestMethod.GET)
 	public String login(ModelMap model)
 	{
+		System.out.println(scheduleProvider.getScheduleOfUser(getLoggedInUserName()).toString());
 		model.put("name", getLoggedInUserName());
 		return "index";
 	}

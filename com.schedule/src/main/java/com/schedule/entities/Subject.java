@@ -1,9 +1,15 @@
 package com.schedule.entities;
 
 public class Subject {
-	private String professorName;
 	private String subjectName;
 	private String description;
+	private String professorName;
+	
+	public Subject (String p_sn, String p_des, String p_pn) {
+		this.subjectName   = p_sn;
+		this.description   = p_des;
+		this.professorName = p_pn;
+	}
 	
 	public String getProfessorName() {
 		return professorName;
@@ -23,4 +29,11 @@ public class Subject {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	@Override
+	public String toString() {
+		return "Subject [subjectName=" + subjectName + ", description="
+				+ description + ", professorName=" + professorName + "]";
+	}
+
 }
