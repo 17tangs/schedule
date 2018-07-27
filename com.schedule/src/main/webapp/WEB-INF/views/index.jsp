@@ -20,7 +20,7 @@
  						</div>
  						<div class="hour">
 							<div class="hourText">
- 								8am 
+ 								8am
  							</div>
  						</div>
  						<div class="hour">
@@ -73,7 +73,7 @@
 		  			</div>
 		  			<div class="class1"> 
 		  				<div class="classText">
-		  					MATH 131AH
+		  					${schedule.subjects.get(0).subjectName}
 		  				</div>
 		  				<div class="classHidden">
 		  					Visan M. <br/>

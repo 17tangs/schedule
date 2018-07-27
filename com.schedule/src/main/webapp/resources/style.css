@@ -76,9 +76,13 @@ h1 {
 	height: 46px;
 	border: 2px solid #25201B;
 	background-color: #3F51B5;
+	transform: scale(1);
+	transition: transform 250ms ease-in-out;
 }
 
 .class1:hover {
+	transform: scale(0.97);
+	transition: transform 250ms ease-in-out;
 	background-color: #313F8C;
 }
 
@@ -89,9 +93,13 @@ h1 {
 	height: 96px;
 	border: 2px solid #25201B;
 	background-color: #F44336;
+	transform: scale(1);
+	transition: transform 250ms ease-in-out;
 }
 
-.class2:hover {
+.class2:hover {	
+	transform: scale(0.97);
+	transition: transform 250ms ease-in-out;
 	background-color: #8C251D;
 }
 
@@ -101,9 +109,13 @@ h1 {
 	height: 96px;
 	border: 2px solid #25201B;
 	background-color: #009688;
+	transform: scale(1);
+	transition: transform 250ms ease-in-out;
 }
 
 .class3:hover {
+	transform: scale(0.97);
+	transition: transform 250ms ease-in-out;
 	background-color: #008C7E;
 }
 
@@ -113,9 +125,13 @@ h1 {
 	height: 96px;
 	border: 2px solid #25201B;
 	background-color: #FF9800;
+	transform: scale(1);
+	transition: transform 250ms ease-in-out;
 }
 
 .class4:hover {
+	transform: scale(0.97);
+	transition: transform 250ms ease-in-out;
 	background-color: #A66300;
 }
 
@@ -125,9 +141,13 @@ h1 {
 	height: 146px;
 	border: 2px solid #25201B;
 	background-color: #673AB7;
+	transform: scale(1);
+	transition: transform 250ms ease-in-out;
 }
 
 .class5:hover {
+	transform: scale(0.97);
+	transition: transform 250ms ease-in-out;
 	background-color: #502D8C;
 }
 
@@ -308,7 +328,7 @@ li {
 	height: 70%;
 }
 
-.details h1{
+.c1Details h1{
 	text-align:start;	
 	margin-top:0px;
 }

@@ -7,6 +7,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.schedule.entities.Schedule;
 import com.schedule.service.IScheduleProvider;
 import com.schedule.service.TestScheduleProvider;
 
@@ -20,8 +21,10 @@ public class GeneralController {
 	@RequestMapping (value = "/", method = RequestMethod.GET)
 	public String login(ModelMap model)
 	{
-		System.out.println(scheduleProvider.getScheduleOfUser(getLoggedInUserName()).toString());
+		Schedule s = scheduleProvider.getScheduleOfUser(getLoggedInUserName());
+		System.out.println(s.toString());
 		model.put("name", getLoggedInUserName());
+		model.put("schedule",s);
 		return "index";
 	}
 

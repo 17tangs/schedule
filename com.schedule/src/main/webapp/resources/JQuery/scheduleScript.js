@@ -1,4 +1,5 @@
-console.log("oh what's up");
+var n = '${name}';
+console.log(n);
 
 function displayDetails(c,d) {
 	var classes = document.getElementsByClassName(c);
