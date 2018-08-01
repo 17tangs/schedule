@@ -1,5 +1,7 @@
 package com.schedule.security;
 
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,6 +10,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.sqlite.SQLiteConfig;
+import org.sqlite.SQLiteDataSource;
 
 @Configuration
 @EnableWebSecurity
@@ -19,9 +23,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		throws Exception {
 		
 		// for now in memory authenticator used for test
-		auth.inMemoryAuthentication().withUser("Sabin").password("Infinity01").roles("ADMIN")
-		.and()
-		.withUser("Sam").password("awesome").roles("ADMIN");
+		auth.jdbcAuthentication()
+		.dataSource(datasource())
+		.usersByUsernameQuery("select username, password from users where username=?")
+		.authoritiesByUsernameQuery("select username, role from user_role where username=?");
+	}
+	
+	@Bean
+	public DataSource datasource() {
+		SQLiteDataSource sds = new SQLiteDataSource(new SQLiteConfig());
+		sds.setUrl("jdbc:sqlite:sample.db");
+		return sds;
 	}
 	
 	@Bean
@@ -45,7 +57,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		// everyone can access the scratch test pages
 		.antMatchers("/scratch/**").permitAll()
 		// the rest of the pages require admin permissino
-		.antMatchers("/","/login").access("hasRole('ADMIN')").and()
+		.antMatchers("/","/login").access("hasRole('USERS')").and()
 		.formLogin()
 		.loginPage("/login")
 		.permitAll(true);
