@@ -18,6 +18,12 @@
 		</property>
 	</bean>
 	
+	<bean id="dataSource" 
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.sqlite.JDBC" />
+		<property name="url" value="jdbc:sqlite:sample.db" />
+	 </bean>
+	
 	<mvc:resources mapping="/resources/**" location="/resources/"  
 	cache-period="31556926"/>
 
