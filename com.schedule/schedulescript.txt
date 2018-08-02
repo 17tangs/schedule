@@ -1,0 +1,31 @@
+create table schedule
+(
+username varchar (45),
+schedulename varchar(45),
+id integer primary key autoincrement,
+unique (username, schedulename)
+);
+
+create table subject
+(
+scheduleid integer references schedule(id),
+name varchar (45),
+description varchar(100),
+professor varchar (45),
+id integer primary key autoincrement,
+unique (scheduleid, name)
+);
+
+create table slot
+(
+startTime int,
+endTime int,
+day varchar(10),
+instructor varchar(45),
+location varchar(45),
+isMeeting varchar(10),
+type varchar(45),
+subjectid int references subject(id),
+id integer primary key autoincrement
+);
+
