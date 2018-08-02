@@ -32,7 +32,6 @@ public class TestScheduleProvider implements IScheduleProvider {
 	private void loadTestData()
 	{
 		//--------------SAM SCHEDULE DATA -----------------------
-		
 		//Class 1: MATH 131AH
 		List<Slot> c1Lec = new ArrayList<Slot>();
 		String c1Prof = "Visan M.";
